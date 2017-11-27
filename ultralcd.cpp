@@ -130,7 +130,7 @@ static void menu_action_setting_edit_callback_long5(const char* pstr, unsigned l
   #endif
 #endif
 
-    //bool wasClicked = LCD_CLICKED;
+    bool wasClicked = LCD_CLICKED;
 /* Helper macros for menus */
 #define START_MENU() do { \
     if (encoderPosition > 0x8000) encoderPosition = 0; \
@@ -295,7 +295,7 @@ static void lcd_status_screen()
     }
 #endif
     #ifndef REPRAP_128X32GRAPH_CONTROLLER
-    bool current_click = 0//LCD_CLICKED;
+    bool current_click = LCD_CLICKED;
     if (ignore_click) {
         if (wait_for_unclick) {
           if (!current_click) {
